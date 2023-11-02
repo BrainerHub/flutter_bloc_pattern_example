@@ -9,10 +9,10 @@ class ApiClient {
   Future<Map<String, dynamic>> fetchData(String endpoint) async {
     final response = await http.get(Uri.parse('$baseUrl/$endpoint'));
     if (response.statusCode == 200) {
-      print('Response status: ${response.statusCode}');
+      // print('Response status: ${response.statusCode}');
       return json.decode(response.body);
     } else {
-      print('Response status: ${response.statusCode}');
+      // print('Response status: ${response.statusCode}');
       throw Exception('Failed to load data');
     }
   }

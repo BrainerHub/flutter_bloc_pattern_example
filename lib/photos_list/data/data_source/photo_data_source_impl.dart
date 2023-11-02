@@ -13,7 +13,7 @@ class PhotoDataSourceImpl implements PhotoDataSource {
     final response = await http.get(Uri.parse(apiUrl));
 
     if (response.statusCode == 200) {
-      print('Response status: ${response.statusCode}');
+      // print('Response status: ${response.statusCode}');
       final List<dynamic> data = json.decode(response.body);
       final List photoEntities =
           data.map((json) => Photo.fromJson(json)).toList();
